@@ -1,0 +1,71 @@
+
+/* Estilos para el footer */
+
+.footer {
+    background-color: #BEA692; /* Color marrón */
+    color: #fff; /* Color blanco para el texto */
+    padding: 1rem;
+    text-align: center;
+    clear: both; /* Limpia cualquier elemento flotante anterior */
+  }
+  
+  .footer p {
+    margin-bottom: 1rem;
+  }
+  
+  .footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer li {
+    margin-right: 20px;
+  }
+  
+  .footer li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer li a:hover {
+    color: #ccc;
+  }
+  
+  /* Estilos para el logo del footer */
+  
+  .footer-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilos para la información de contacto */
+  
+  .contact-info {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info span {
+    font-weight: bold;
+  }
+  
+  /* Estilos para la política de privacidad y términos de uso */
+  
+  .privacy-terms {
+    font-size: 0.8rem;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilos para el copyright */
+  
+  .copyright {
+    font-size: 0.8rem;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+  

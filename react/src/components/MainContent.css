@@ -1,0 +1,17 @@
+.maincontent{
+    margin-left: 2%;
+}
+
+.conteiner{
+    display: flex;
+}
+
+.textoPrimero{
+    width: 60%;
+}
+
+.imagen-iframe{
+    float: right;
+    margin-left: 3%;
+}
+
