@@ -60,7 +60,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #f4f4f4 !important ;
   text-align: left;
   background-color: #fff; }
 
@@ -175,7 +175,9 @@ figure {
 
 img {
   vertical-align: middle;
-  border-style: none; }
+  border-style: none; 
+  width: 100%;
+}
 
 svg:not(:root) {
   overflow: hidden; }
@@ -3190,7 +3192,9 @@ input[type="button"].btn-block {
 .nav-tabs {
   border-bottom: 1px solid #dee2e6; }
   .nav-tabs .nav-item {
-    margin-bottom: -1px; }
+    margin-bottom: -1px; 
+    color: #fff !important;}
+
   .nav-tabs .nav-link {
     border: 1px solid transparent;
     border-top-left-radius: 0.25rem;
@@ -4716,12 +4720,14 @@ button.close {
 
 .carousel-inner {
   position: relative;
+  height: 620px;
   width: 100%;
   overflow: hidden; }
 
 .carousel-item {
   position: relative;
   display: none;
+  height: inherit;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -7494,7 +7500,7 @@ h1, h2, h3, h4, h5,
     .ftco-navbar-light.scrolled .nav-link {
       padding-top: 0.9rem !important;
       padding-bottom: 0.9rem !important;
-      color: #000 !important; }
+      color: #fff !important; }
       .ftco-navbar-light.scrolled .nav-link.active {
         color: #c49b63 !important; }
     .ftco-navbar-light.scrolled.awake {

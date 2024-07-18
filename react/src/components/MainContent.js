@@ -1,7 +1,7 @@
 // components/MainContent.js
 import React from 'react';
 import MenuItem from './MenuItem';
-import './MainContent.css';
+/* import './MainContent.css'; */
 
 const MainContent = () => {
   return (

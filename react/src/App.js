@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
-import Menu from './components/Menu';
+import Home from './components/Home.js';
+import About from './components/About.js';
+import Menu from './components/Menu.js';
 import ContactInfo from './components/ContactInfo';
 import Footer from './components/Footer';
 
@@ -32,8 +34,9 @@ const App = () => {
   return (
     <div>
       <Header />
-       
-      <Footer />
+      <Home/>
+      <About/>
+      <Menu/>
     </div>
   );
 };

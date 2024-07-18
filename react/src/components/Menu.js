@@ -71,7 +71,7 @@ const MenuSection = () => {
   };
 
   return (
-    <div className='menu-div'>
+    <div id="menu" className='menu-div'>
 
       <h2>Menú</h2>
       <ul className='menu-section'>
