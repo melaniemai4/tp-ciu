@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import $ from 'jquery';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { createPopper } from '@popperjs/core';
 
 window.$ = $;
