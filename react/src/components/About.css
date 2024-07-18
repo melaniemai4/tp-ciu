@@ -1,8 +1,13 @@
-.about{
-    margin-left: 2%;
-    margin-bottom: 2%;
+.padding-custom{
+    padding-right: 5% !important;
 }
 
-.div-imagenes{
-    display: flow;
+.navbar{
+    background: #151111 !important;
+    position: fixed !important;
+    margin-top: 0px !important;
+}
+
+section{
+    margin-top: 100px !important
 }
