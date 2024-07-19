@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Home from './components/Home.js';
 import About from './components/About.js';
 import Menu from './components/Menu.js';
+import ImageGallery from './components/ImageGallery.js';
 import ContactInfo from './components/ContactInfo';
 import Footer from './components/Footer';
 
@@ -37,6 +38,7 @@ const App = () => {
       <Home/>
       <About/>
       <Menu/>
+      <ImageGallery />
     </div>
   );
 };
