@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@react-google-maps/api": "^2.19.3",
     "jquery": "^3.7.1",
     "popper.js": "^1.16.1"
   }

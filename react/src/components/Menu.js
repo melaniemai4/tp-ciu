@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import MenuItem from './MenuItem';
 import './Menu.css';
-
 
 const menu = [
   {
@@ -48,11 +46,7 @@ const menu = [
   }
 ];
 
-
-
-
 const MenuSection = () => {
-
   const [selectedItems, setSelectedItems] = useState([]);
   const [quantities, setQuantities] = useState({});
 
@@ -60,9 +54,48 @@ const MenuSection = () => {
     setSelectedItems([]);
     setQuantities({});
   }, []);
+
   const handleSelectItem = (id, quantity) => {
-    setSelectedItems((prevItems) => [...prevItems, { id, quantity }]);
-    setQuantities((prevQuantities) => ({ ...prevQuantities, [id]: quantity }));
+    if (quantity > 0) {
+      setSelectedItems((prevItems) => {
+        const existingItem = prevItems.find((item) => item.id === id);
+        if (existingItem) {
+          return prevItems.map((item) =>
+            item.id === id ? { ...item, quantity } : item
+          );
+        } else {
+          return [...prevItems, { id, quantity }];
+        }
+      });
+      setQuantities((prevQuantities) => ({ ...prevQuantities, [id]: quantity }));
+    } else {
+      alert('La cantidad no puede ser 0.');
+    }
+  };
+
+  const handleIncrementQuantity = (id) => {
+    setQuantities((prevQuantities) => {
+      const newQuantity = (prevQuantities[id] || 0) + 1;
+      handleSelectItem(id, newQuantity);
+      return { ...prevQuantities, [id]: newQuantity };
+    });
+  };
+
+  const handleDecrementQuantity = (id) => {
+    setQuantities((prevQuantities) => {
+      const newQuantity = Math.max((prevQuantities[id] || 0) - 1, 0);
+      handleSelectItem(id, newQuantity);
+      return { ...prevQuantities, [id]: newQuantity };
+    });
+  };
+
+  const handleAddItem = (id) => {
+    const quantity = quantities[id] || 0;
+    if (quantity > 0) {
+      handleSelectItem(id, quantity);
+    } else {
+      alert('La cantidad no puede ser 0.');
+    }
   };
 
   const handleCalculateTotal = () => {
@@ -72,7 +105,6 @@ const MenuSection = () => {
 
   return (
     <div id="menu" className='menu-div'>
-
       <h2>Menú</h2>
       <ul className='menu-section'>
         {menu.map((menuItem) => (
@@ -82,13 +114,35 @@ const MenuSection = () => {
             <span>($ {menuItem.price})</span>
             <input
               type="number"
+              min="0"
               value={quantities[menuItem.id] || 0}
               onChange={(e) => {
-                handleSelectItem(menuItem.id, parseInt(e.target.value));
+                const value = parseInt(e.target.value) || 0; // Handle empty input
+                setQuantities((prevQuantities) => ({ ...prevQuantities, [menuItem.id]: value }));
               }}
               placeholder="Cantidad"
             />
-            <button className="button-agregar" onClick={() => handleSelectItem(menuItem.id, 1)}>Agregar</button>
+            <button
+              className="button-decrement"
+              onClick={() => handleDecrementQuantity(menuItem.id)}
+              aria-label="Disminuir cantidad"
+            >
+              -
+            </button>
+            <button
+              className="button-increment"
+              onClick={() => handleIncrementQuantity(menuItem.id)}
+              aria-label="Incrementar cantidad"
+            >
+              +
+            </button>
+            <button
+              className="button-agregar"
+              onClick={() => handleAddItem(menuItem.id)}
+              disabled={quantities[menuItem.id] === 0}
+            >
+              Agregar
+            </button>
           </li>
         ))}
       </ul>
