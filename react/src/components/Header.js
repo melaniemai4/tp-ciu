@@ -7,6 +7,7 @@ import Home from './MainContent';
 import Menu from './Menu';
 import About from './About';
 import Contact from './ContactInfo';
+import ImageGallery from './ImageGallery';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -42,6 +43,7 @@ const Header = () => {
             <Nav.Link className="nav-item" href="#home">Home</Nav.Link>
             <Nav.Link className="nav-item" href="#aboutus">Sobre Nosotros</Nav.Link>
             <Nav.Link className="nav-item" href="#menu">Menu</Nav.Link>
+            <Nav.Link className="nav-item" href="#gallery">Galeria</Nav.Link>
            {/*  <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
