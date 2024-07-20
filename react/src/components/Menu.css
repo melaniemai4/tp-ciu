@@ -37,7 +37,7 @@
 
 .menu-section li input[type="number"] {
     width: 50px;
-    height: 16px;
+    height: 20px;
     padding: 8px;
     margin: 0px 8px;
     font-size: 16px;
@@ -93,4 +93,15 @@
 
 .menu-section li button[type="button"]:hover {
     background-color: #3e8e41
+}
+
+.button-increment, .button-decrement{
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: lighter;
+    background-color: #8B6E55;
+    color: #fff;
+    cursor: pointer;
 }

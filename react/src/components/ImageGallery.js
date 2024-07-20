@@ -11,10 +11,10 @@ const ImageGallery = () => {
   }, []);
 
   return (
-    <section className="ftco-gallery">
+    <section id="gallery" className="ftco-gallery">
       <div className="container-wrap">
-        <div className="row no-gutters">
-          {images.map((image, index) => (
+        <div className="row no-gutters mx-0">
+          {images.filter(image => image.image && image.image !== 'image-1').map((image, index) => (
             <div className="col-md-3" key={index}>
               <a href="#" className="gallery img d-flex align-items-center" style={{ backgroundImage: `url(${image.image})` }}>
                 <div className="icon mb-4 d-flex align-items-center justify-content-center">
